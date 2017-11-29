@@ -15,15 +15,6 @@ public class FormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
-
-        Button botaoSalvar = (Button)findViewById(R.id.formulario_salvar);
-        botaoSalvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(FormularioActivity.this, "Aluno adicionado", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
     }
 
     @Override
@@ -35,6 +26,13 @@ public class FormularioActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_formulario_ok:
+                Toast.makeText(FormularioActivity.this, "Aluno salvo!", Toast.LENGTH_SHORT).show();
+                finish();
+                break;
+
+        }
         return super.onOptionsItemSelected(item);
     }
 }
