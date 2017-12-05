@@ -1,10 +1,12 @@
 package br.com.alura.modelo;
 
+import java.io.Serializable;
+
 /**
  * Created by ruicosenza on 04/12/17.
  */
 
-public class Aluno {
+public class Aluno implements Serializable {
     private Long id;
     private String nome;
     private String endereco;
